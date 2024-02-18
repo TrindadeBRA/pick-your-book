@@ -1,0 +1,53 @@
+{
+  "books": [
+    {
+      "name": "Harry Potter e a Pedra Filosofal",
+      "author": "J.K. Rowling",
+      "pub_year": 1997,
+      "description": "Harry Potter descobre que é um bruxo e é convidado a frequentar a Escola de Magia e Bruxaria de Hogwarts. Lá, ele faz novos amigos, enfrenta desafios mágicos e descobre segredos sobre seu passado.",
+      "book_cover": "/images/book-cover/harry-potter-e-a-pedra-filosofal.jpg"
+    },
+    {
+      "name": "As Vantagens de Ser Invisível",
+      "author": "Stephen Chbosky",
+      "pub_year": 1999,
+      "description": "Charlie, um adolescente introvertido, enfrenta o primeiro ano do ensino médio enquanto lida com questões familiares e faz novos amigos, incluindo o excêntrico Patrick e a enigmática Sam.",
+      "book_cover": "/images/book-cover/as-vantagens-de-ser-invisivel.jpg"
+    },
+    {
+      "name": "O Rei dos Dividendos",
+      "author": " Luiz Barsi Filho",
+      "pub_year": 2022,
+      "description": "Menino pobre, criado sozinho pela mãe num cortiço, Luiz Barsi Filho se tornou uma lenda no mundo dos investimentos. Não foi da noite para o dia. Ele começou a investir no final dos anos 1960, passou por sucessivas crises e planos econômicos, e prosperou em (quase) todos os momentos.",
+      "book_cover": "/images/book-cover/o-rei-dos-dividendos.jpg"
+    },
+    {
+      "name": "O Senhor dos Anéis: A Sociedade do Anel",
+      "author": "J.R.R. Tolkien",
+      "pub_year": 1954,
+      "description": "Frodo Bolseiro embarca em uma jornada épica para destruir o Um Anel e impedir que o Senhor das Trevas, Sauron, conquiste o mundo. Ele é acompanhado por um grupo de companheiros, formando a Sociedade do Anel.",
+      "book_cover": "/images/book-cover/o-senhor-dos-aneis-a-sociedade-do-anel.jpg"
+    },
+    {
+      "name": "O Iluminado",
+      "author": "Stephen King",
+      "pub_year": 1977,
+      "description": "Jack Torrance aceita um emprego como zelador em um hotel isolado, onde pretende escrever um livro. No entanto, forças sinistras dentro do hotel despertam seus demônios interiores, levando-o a uma espiral de loucura e violência.",
+      "book_cover": "/images/book-cover/o-iluminado.jpg"
+    },
+    {
+      "name": "It: A Coisa",
+      "author": "Stephen King",
+      "pub_year": 1986,
+      "description": "Em Derry, uma cidadezinha do Maine, sete crianças enfrentam uma entidade maligna que assume a forma de seus piores medos. Vinte e sete anos depois, eles retornam a Derry para confrontar o terrível palhaço Pennywise e seus horrores.",
+      "book_cover": "/images/book-cover/it-a-coisa.jpg"
+    },
+    {
+      "name": "O Exorcista",
+      "author": "William Peter Blatty",
+      "pub_year": 1971,
+      "description": "Quando a jovem Regan MacNeil é possuída por uma entidade demoníaca, sua mãe Chris recorre a dois padres para realizar um exorcismo. Enfrentando o mal em sua forma mais pura, os padres Merrin e Karras arriscam suas almas para salvar a menina.",
+      "book_cover": "/images/book-cover/o-exorcista.jpg"
+    }
+  ]
+}
