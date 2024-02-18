@@ -1,0 +1,74 @@
+{
+  "books": [
+    {
+      "name": "Orgulho e Preconceito",
+      "author": "Jane Austen",
+      "pub_year": 1813,
+      "description": "Um clássico da literatura inglesa, Orgulho e Preconceito conta a história do orgulhoso Sr. Darcy e da vivaz Elizabeth Bennet, cujo relacionamento é inicialmente marcado por mal-entendidos e preconceitos.",
+      "book_cover": "/images/book-cover/orgulho-e-preconceito.jpg"
+    },
+    {
+      "name": "O Morro dos Ventos Uivantes",
+      "author": "Emily Brontë",
+      "pub_year": 1847,
+      "description": "Uma história de amor tumultuosa e obsessiva entre Catherine Earnshaw e Heathcliff, ambientada nas brumosas charnecas de Yorkshire.",
+      "book_cover": "/images/book-cover/o-morro-dos-ventos-uivantes.jpg"
+    },
+    {
+      "name": "Romeu e Julieta",
+      "author": "William Shakespeare",
+      "pub_year": 1597,
+      "description": "Uma das tragédias mais famosas de Shakespeare, Romeu e Julieta conta a história de dois jovens amantes cujas famílias rivais os impedem de ficarem juntos, resultando em um final trágico.",
+      "book_cover": "/images/book-cover/romeu-e-julieta.jpg"
+    },
+    {
+      "name": "Anna Karenina",
+      "author": "Leo Tolstoy",
+      "pub_year": 1877,
+      "description": "Um épico romance russo que explora temas como amor, infidelidade, família e sociedade através da história de Anna Karenina, uma mulher da alta sociedade que se apaixona pelo oficial de cavalaria Conde Vronsky.",
+      "book_cover": "/images/book-cover/anna-karenina.jpg"
+    },
+    {
+      "name": "Cem Anos de Solidão",
+      "author": "Gabriel García Márquez",
+      "pub_year": 1967,
+      "description": "Um romance mágico realista que narra a história da família Buendía ao longo de várias gerações em Macondo, uma cidade fictícia na América Latina.",
+      "book_cover": "/images/book-cover/cem-anos-de-solidao.jpg"
+    },
+    {
+      "name": "Amor nos Tempos do Cólera",
+      "author": "Gabriel García Márquez",
+      "pub_year": 1985,
+      "description": "Um conto de amor não correspondido que perdura ao longo de décadas, Amor nos Tempos do Cólera segue a história de Florentino Ariza e Fermina Daza, cujo amor é testado pelo tempo e pelas circunstâncias.",
+      "book_cover": "/images/book-cover/amor-nos-tempos-do-colera.jpg"
+    },
+    {
+      "name": "Jane Eyre",
+      "author": "Charlotte Brontë",
+      "pub_year": 1847,
+      "description": "Uma história de crescimento, independência e romance, Jane Eyre segue a vida de sua protagonista homônima, uma governanta órfã que se apaixona pelo misterioso e atormentado Sr. Rochester.",
+      "book_cover": "/images/book-cover/jane-eyre.jpg"
+    },
+    {
+      "name": "Persuasão",
+      "author": "Jane Austen",
+      "pub_year": 1818,
+      "description": "Persuasão é o último romance completo escrito por Jane Austen. É uma história de amor e segundas chances, centrada em Anne Elliot, uma mulher solteira de 27 anos, e seu reencontro com o Capitão Frederick Wentworth, com quem ela tinha sido brevemente noiva oito anos antes.",
+      "book_cover": "/images/book-cover/persuasao.jpg"
+    },
+    {
+      "name": "O Amor nos Tempos do Cólera",
+      "author": "Gabriel García Márquez",
+      "pub_year": 1985,
+      "description": "O Amor nos Tempos do Cólera é uma obra magistral que explora as complexidades do amor e do desejo através da história de amor entre Florentino Ariza e Fermina Daza, que se mantém inalterada ao longo de décadas e é testada por circunstâncias extraordinárias.",
+      "book_cover": "/images/book-cover/o-amor-nos-tempos-do-colera.jpg"
+    },
+    {
+      "name": "Dom Casmurro",
+      "author": "Machado de Assis",
+      "pub_year": 1899,
+      "description": "Considerado uma das maiores obras da literatura brasileira, Dom Casmurro é um romance que narra a história de Bento Santiago, um homem atormentado pela dúvida sobre a fidelidade de sua esposa, Capitu.",
+      "book_cover": "/images/book-cover/dom-casmurro.jpg"
+    }
+  ]
+}
