@@ -131,7 +131,7 @@
     <div id="bookData" style="display:none;">
         <h2>Sua próxima leitura pode ser:</h2>
         <div id="book-info">
-            <a target="_blank" class="buy-button">
+            <a target="_blank" class="buy-image">
                 <img src="" alt="" class="book-cover">
             </a>
             <div class="col-right">
@@ -212,6 +212,7 @@
                         let buyAmznUrl = "https://www.amazon.com.br/s?k=" + bookNameFormatted + "&i=stripbooks&crid=14EMS0LVCVSJJ&sprefix=" + bookNameFormatted + "%2Cstripbooks%2C288&ref=nb_sb_ss_ts-doa-p_1_10";
                         // console.log(">>", buyAmznUrl)
                         document.querySelector('.buy-button').href = buyAmznUrl
+                        document.querySelector('.buy-image').href = buyAmznUrl
 
 
 
