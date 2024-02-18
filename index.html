@@ -40,8 +40,13 @@
 
     <script>
         function sortAgain() {
+            // Rolar a página para o topo
+            window.scrollTo(0, 0);
+
+            // Recarregar a página
             window.location.reload();
         }
+
 
         function submitForm2() {
             var category = document.getElementById("category").value;
