@@ -179,8 +179,8 @@
             const categoryParam = urlParams.get(`cat_${category}`);
             if (categoryParam) {
                 const numbers = categoryParam.split(',').map(Number);
-                console.log("numbers.length", numbers.length)
-                console.log("qntyResults", qntyResults)
+                // console.log("numbers.length", numbers.length)
+                // console.log("qntyResults", qntyResults)
 
                 if (numbers.length === qntyResults) {
                     return false;
