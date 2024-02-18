@@ -1,0 +1,61 @@
+{
+    "books": [
+      {
+        "name": "O Guardador de Águas",
+        "author": "Manoel de Barros",
+        "pub_year": 1989,
+        "description": "Uma obra poética que transita entre a simplicidade e a profundidade, explorando a relação entre o homem e a natureza através de uma linguagem única e inventiva.",
+        "book_cover": "/images/book-cover/o-guardador-de-aguas.jpg"
+      },
+      {
+        "name": "Poema Sujo",
+        "author": "Ferreira Gullar",
+        "pub_year": 1976,
+        "description": "Um dos maiores expoentes da poesia brasileira contemporânea, este livro mergulha nas questões políticas e sociais do Brasil dos anos 70, refletindo a angústia e a esperança de uma geração.",
+        "book_cover": "/images/book-cover/poema-sujo.jpg"
+      },
+      {
+        "name": "A Rosa do Povo",
+        "author": "Carlos Drummond de Andrade",
+        "pub_year": 1945,
+        "description": "Considerada uma das obras mais importantes da poesia brasileira, este livro reflete sobre as contradições e os desafios do mundo moderno, explorando temas como amor, guerra e esperança.",
+        "book_cover": "/images/book-cover/a-rosa-do-povo.jpg"
+      },
+      {
+        "name": "Antologia Poética",
+        "author": "Vinicius de Moraes",
+        "pub_year": 1954,
+        "description": "Uma seleção dos melhores poemas do autor, que abordam temas como amor, saudade e melancolia com uma linguagem sensível e envolvente.",
+        "book_cover": "/images/book-cover/antologia-poetica.jpg"
+      },
+      {
+        "name": "Poesia Completa e Prosa",
+        "author": "Cecília Meireles",
+        "pub_year": 1957,
+        "description": "Uma coletânea que reúne toda a obra poética da autora, conhecida por sua sensibilidade e delicadeza ao abordar temas como infância, amor e passagem do tempo.",
+        "book_cover": "/images/book-cover/poesia-completa-e-prosa.jpg"
+      },
+      {
+        "name": "A Educação pela Pedra",
+        "author": "João Cabral de Melo Neto",
+        "pub_year": 1966,
+        "description": "Um dos grandes poetas brasileiros do século XX, este livro apresenta uma poesia marcada pela precisão e pela objetividade, explorando temas como a seca, o sertão e a cultura popular.",
+        "book_cover": "/images/book-cover/a-educacao-pela-pedra.jpg"
+      },
+      {
+        "name": "Claro Enigma",
+        "author": "Carlos Drummond de Andrade",
+        "pub_year": 1951,
+        "description": "Outra obra importante do autor, este livro apresenta uma poesia que oscila entre o cotidiano e o metafísico, explorando questões universais com uma linguagem acessível e profunda.",
+        "book_cover": "/images/book-cover/claro-enigma.jpg"
+      },
+      {
+        "name": "Laços de Família",
+        "author": "Clarice Lispector",
+        "pub_year": 1960,
+        "description": "Embora mais conhecida por sua prosa, Clarice Lispector também deixou uma marca na poesia brasileira. Este livro apresenta uma seleção de seus melhores poemas, que exploram temas como identidade, amor e solidão.",
+        "book_cover": "/images/book-cover/lacos-de-familia.jpg"
+      }
+    ]
+  }
+  
