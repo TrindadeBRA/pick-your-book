@@ -55,7 +55,7 @@
 
         function searchRandomBook(category) {
             // Mapear o caminho do arquivo JSON com base na categoria fornecida
-            const filePath = `categories/${category}.json`;
+            const filePath = `https://raw.githubusercontent.com/TrindadeBRA/pick-your-book/master/categories/${category}.json`;
 
             // Realizar a requisição local
             fetch(filePath)
@@ -90,7 +90,7 @@
                         document.querySelector('.book-author').textContent = book.author;
                         document.querySelector('.book-pub_year').textContent = book.pub_year;
                         document.querySelector('.book-description').textContent = book.description;
-                        document.querySelector('.book-cover').src = removeAccent(book.book_cover);
+                        document.querySelector('.book-cover').src = "https://raw.githubusercontent.com/TrindadeBRA/pick-your-book/master/" + removeAccent(book.book_cover);
 
                         // Exibir a div com os dados do livro
                         document.getElementById("form2").style.display = "none";
