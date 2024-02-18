@@ -4,7 +4,7 @@
     }
 
     #bookData .buy-image {
-        min-width: 270px !important;
+        min-width: 270px;
     }
 
     #book-info {
@@ -216,12 +216,11 @@
                         document.querySelector('.book-cover').title = book.name;
 
                         let bookNameFormatted = formatBookName(book.name);
-                        let buyAmznUrl = "https://www.amazon.com.br/s?k=" + bookNameFormatted + "&i=stripbooks&crid=14EMS0LVCVSJJ&sprefix=" + bookNameFormatted + "%2Cstripbooks%2C288&ref=nb_sb_ss_ts-doa-p_1_10";
+                        let buyAmznUrl = "https://www.amazon.com.br/s?k=" + bookNameFormatted + "&i=stripbooks&crid=14EMS0LVCVSJJ&sprefix=" + bookNameFormatted + "%2Cstripbooks%2C288&linkCode=ll2&tag=trindadebra06-20&linkId=292401f8c737965fe22e62087dc57222&language=pt_BR&ref_=as_li_ss_tl";
+                        
                         // console.log(">>", buyAmznUrl)
                         document.querySelector('.buy-button').href = buyAmznUrl
                         document.querySelector('.buy-image').href = buyAmznUrl
-
-
 
                         // Exibir a div com os dados do livro
                         document.getElementById("div-category").style.display = "none";
