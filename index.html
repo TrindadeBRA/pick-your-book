@@ -54,6 +54,11 @@
         cursor: pointer;
     }
 
+    #form-category label {
+        margin-bottom: 0;
+        display: block;
+    }
+
     @media only screen and (min-width: 769px) {
         .mobonly {
             display: none !important;
@@ -100,7 +105,7 @@
     <div id="div-category">
         <h2 style="margin-bottom: 15px;">Escolha uma categoria:</h2>
         <form id="form-category">
-            <label for="category">Selecione uma categoria de livros:</label><br>
+            <label for="category">Selecione uma categoria de livros:</label>
             <select id="category" name="category">
                 <option value="biography">Biografia</option>
                 <option value="fantasy">Fantasia</option>
