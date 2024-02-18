@@ -1,0 +1,74 @@
+{
+  "books": [
+    {
+      "name": "O Iluminado",
+      "author": "Stephen King",
+      "pub_year": 1977,
+      "description": "Jack Torrance aceita um emprego como zelador em um hotel isolado, onde pretende escrever um livro. No entanto, forças sinistras dentro do hotel despertam seus demônios interiores, levando-o a uma espiral de loucura e violência.",
+      "book_cover": "/images/book-cover/o-iluminado.jpg"
+    },
+    {
+      "name": "It: A Coisa",
+      "author": "Stephen King",
+      "pub_year": 1986,
+      "description": "Em Derry, uma cidadezinha do Maine, sete crianças enfrentam uma entidade maligna que assume a forma de seus piores medos. Vinte e sete anos depois, eles retornam a Derry para confrontar o terrível palhaço Pennywise e seus horrores.",
+      "book_cover": "/images/book-cover/it-a-coisa.jpg"
+    },
+    {
+      "name": "O Exorcista",
+      "author": "William Peter Blatty",
+      "pub_year": 1971,
+      "description": "Quando a jovem Regan MacNeil é possuída por uma entidade demoníaca, sua mãe Chris recorre a dois padres para realizar um exorcismo. Enfrentando o mal em sua forma mais pura, os padres Merrin e Karras arriscam suas almas para salvar a menina.",
+      "book_cover": "/images/book-cover/o-exorcista.jpg"
+    },
+    {
+      "name": "Psicose",
+      "author": "Robert Bloch",
+      "pub_year": 1959,
+      "description": "Baseado em crimes reais, este romance de suspense psicológico conta a história de Norman Bates, proprietário de um motel isolado, e de Marion Crane, uma mulher que foge com dinheiro roubado. O encontro entre os dois personagens tem consequências perturbadoras.",
+      "book_cover": "/images/book-cover/psicose.jpg"
+    },
+    {
+      "name": "Cemitério Maldito",
+      "author": "Stephen King",
+      "pub_year": 1983,
+      "description": "Louis Creed muda-se com sua família para uma casa próxima a um antigo cemitério indígena, onde os mortos têm o estranho hábito de ressuscitar. Quando uma tragédia atinge sua família, Louis descobre os perigos de brincar com os mortos.",
+      "book_cover": "/images/book-cover/cemiterio-maldito.jpg"
+    },
+    {
+      "name": "O Chamado de Cthulhu",
+      "author": "H.P. Lovecraft",
+      "pub_year": 1928,
+      "description": "Neste conto clássico de horror cósmico, um acadêmico descobre um culto adorador de uma antiga entidade cósmica conhecida como Cthulhu. Conforme ele investiga o culto, ele se vê imerso em um mundo de terror indescritível e insanidade.",
+      "book_cover": "/images/book-cover/o-chamado-de-cthulhu.jpg"
+    },
+    {
+      "name": "Drácula",
+      "author": "Bram Stoker",
+      "pub_year": 1897,
+      "description": "Neste clássico do horror gótico, o conde Drácula deixa sua terra natal na Transilvânia e viaja para a Inglaterra, onde espalha morte e terror. Enquanto uma equipe de caçadores de vampiros tenta detê-lo, eles descobrem segredos sombrios e enfrentam o mal em sua forma mais pura.",
+      "book_cover": "/images/book-cover/dracula.jpg"
+    },
+    {
+      "name": "O Silêncio dos Inocentes",
+      "author": "Thomas Harris",
+      "pub_year": 1988,
+      "description": "O agente do FBI Jack Crawford procura um assassino em série conhecido como Buffalo Bill. Para capturá-lo, ele busca a ajuda da jovem e talentosa agente Clarice Starling, que entrevista o psiquiatra canibal Dr. Hannibal Lecter em busca de pistas.",
+      "book_cover": "/images/book-cover/o-silencio-dos-inocentes.jpg"
+    },
+    {
+      "name": "Misery: Louca Obsessão",
+      "author": "Stephen King",
+      "pub_year": 1987,
+      "description": "Após um acidente de carro, o famoso escritor Paul Sheldon é resgatado por sua fã número um, Annie Wilkes. No entanto, Annie logo se revela uma enfermeira psicótica e violenta, determinada a manter Paul como prisioneiro para sempre.",
+      "book_cover": "/images/book-cover/misery-louca-obsessao.jpg"
+    },
+    {
+      "name": "O Demonologista",
+      "author": "Andrew Pyper",
+      "pub_year": 2013,
+      "description": "David Ullman, um professor universitário especializado em mitologia demoníaca, é convidado a Veneza para testemunhar um fenômeno sobrenatural. Lá, ele se vê mergulhado em um pesadelo de horror e desespero, lutando para salvar a alma de sua filha.",
+      "book_cover": "/images/book-cover/o-demonologista.jpg"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "books": [
+      {
+          "name": "O Silêncio dos Inocentes",
+          "author": "Thomas Harris",
+          "pub_year": 1988,
+          "description": "O agente do FBI Jack Crawford procura um assassino em série conhecido como Buffalo Bill. Para capturá-lo, ele busca a ajuda da jovem e talentosa agente Clarice Starling, que entrevista o psiquiatra canibal Dr. Hannibal Lecter em busca de pistas.",
+          "book_cover": "/images/book-cover/o-silencio-dos-inocentes.jpg"
+      },
+      {
+          "name": "A Garota no Trem",
+          "author": "Paula Hawkins",
+          "pub_year": 2015,
+          "description": "Rachel, uma mulher desempregada e alcoólatra, pega o trem todas as manhãs e observa um casal pela janela. Quando a mulher desaparece, Rachel se envolve em uma teia de segredos e mentiras, tornando-se uma peça-chave na investigação.",
+          "book_cover": "/images/book-cover/a-garota-no-trem.jpg"
+      },
+      {
+          "name": "O Colecionador de Ossos",
+          "author": "Jeffery Deaver",
+          "pub_year": 1997,
+          "description": "O detetive Lincoln Rhyme, paralisado após um acidente, volta ao trabalho para perseguir um assassino em série que coleciona os ossos de suas vítimas. Com a ajuda da jovem policial Amelia Sachs, Rhyme enfrenta um adversário inteligente e implacável.",
+          "book_cover": "/images/book-cover/o-colecionador-de-ossos.jpg"
+      },
+      {
+          "name": "Psicose",
+          "author": "Robert Bloch",
+          "pub_year": 1959,
+          "description": "Baseado em crimes reais, este romance de suspense psicológico conta a história de Norman Bates, proprietário de um motel isolado, e de Marion Crane, uma mulher que foge com dinheiro roubado. O encontro entre os dois personagens tem consequências perturbadoras.",
+          "book_cover": "/images/book-cover/psicose.jpg"
+      },
+      {
+          "name": "O Chamado do Cuco",
+          "author": "Robert Galbraith",
+          "pub_year": 2013,
+          "description": "O detetive particular Cormoran Strike é contratado para investigar o suposto suicídio de uma famosa modelo. Conforme ele mergulha no mundo glamoroso e sombrio da moda, descobre segredos perturbadores e enfrenta ameaças à sua própria vida.",
+          "book_cover": "/images/book-cover/o-chamado-do-cuco.jpg"
+      },
+      {
+          "name": "O Iluminado",
+          "author": "Stephen King",
+          "pub_year": 1977,
+          "description": "Jack Torrance aceita um emprego como zelador em um hotel isolado, onde pretende escrever um livro. No entanto, forças sinistras dentro do hotel despertam seus demônios interiores, levando-o a uma espiral de loucura e violência.",
+          "book_cover": "/images/book-cover/o-iluminado.jpg"
+      },
+      {
+          "name": "Garota Exemplar",
+          "author": "Gillian Flynn",
+          "pub_year": 2012,
+          "description": "No dia do seu quinto aniversário de casamento, Amy desaparece misteriosamente. Seu marido, Nick, torna-se o principal suspeito. Conforme a investigação avança, segredos perturbadores vêm à tona, revelando a verdade por trás do relacionamento aparentemente perfeito do casal.",
+          "book_cover": "/images/book-cover/garota-exemplar.jpg"
+      },
+      {
+          "name": "O Assassinato de Roger Ackroyd",
+          "author": "Agatha Christie",
+          "pub_year": 1926,
+          "description": "O detetive Hercule Poirot investiga o assassinato de Roger Ackroyd em uma pequena vila inglesa. Com reviravoltas surpreendentes e um final chocante, este clássico de Agatha Christie é uma obra-prima do mistério e do suspense.",
+          "book_cover": "/images/book-cover/o-assassinato-de-roger-ackroyd.jpg"
+      },
+      {
+          "name": "O Segredo do Meu Marido",
+          "author": "Liane Moriarty",
+          "pub_year": 2013,
+          "description": "Cecilia Fitzpatrick encontra uma carta escrita por seu marido, endereçada a ela, para ser lida apenas após sua morte. Conforme ela mergulha no passado do marido, segredos chocantes vêm à tona, colocando em risco sua família e sua própria sanidade.",
+          "book_cover": "/images/book-cover/o-segredo-do-meu-marido.jpg"
+      }
+  ]
+}

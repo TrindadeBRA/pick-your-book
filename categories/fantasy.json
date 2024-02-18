@@ -1,0 +1,74 @@
+{
+  "books": [
+    {
+      "name": "Harry Potter e a Pedra Filosofal",
+      "author": "J.K. Rowling",
+      "pub_year": 1997,
+      "description": "Harry Potter descobre que é um bruxo e é convidado a frequentar a Escola de Magia e Bruxaria de Hogwarts. Lá, ele faz novos amigos, enfrenta desafios mágicos e descobre segredos sobre seu passado.",
+      "book_cover": "/images/book-cover/harry-potter-e-a-pedra-filosofal.jpg"
+    },
+    {
+      "name": "O Senhor dos Anéis: A Sociedade do Anel",
+      "author": "J.R.R. Tolkien",
+      "pub_year": 1954,
+      "description": "Frodo Bolseiro embarca em uma jornada épica para destruir o Um Anel e impedir que o Senhor das Trevas, Sauron, conquiste o mundo. Ele é acompanhado por um grupo de companheiros, formando a Sociedade do Anel.",
+      "book_cover": "/images/book-cover/o-senhor-dos-aneis-a-sociedade-do-anel.jpg"
+    },
+    {
+      "name": "As Crônicas de Nárnia: O Leão, a Feiticeira e o Guarda-Roupa",
+      "author": "C.S. Lewis",
+      "pub_year": 1950,
+      "description": "Quatro irmãos descobrem um mundo mágico dentro de um guarda-roupa e são transportados para Nárnia, onde se juntam a Aslan, o Grande Leão, em uma batalha contra a Feiticeira Branca para salvar o reino da eterna nevasca.",
+      "book_cover": "/images/book-cover/as-cronicas-de-narnia-o-leao-a-feiticeira-e-o-guarda-roupa.jpg"
+    },
+    {
+      "name": "Percy Jackson e os Olimpianos: O Ladrão de Raios",
+      "author": "Rick Riordan",
+      "pub_year": 2005,
+      "description": "Percy Jackson descobre que é um semideus, filho de Poseidon, e embarca em uma missão para encontrar o raio de Zeus roubado. Com a ajuda de seus amigos semideuses, ele enfrenta criaturas mitológicas e deuses do Olimpo.",
+      "book_cover": "/images/book-cover/percy-jackson-e-os-olimpianos-o-ladrao-de-raios.jpg"
+    },
+    {
+      "name": "A Guerra dos Tronos",
+      "author": "George R.R. Martin",
+      "pub_year": 1996,
+      "description": "Nobreza, traição, intriga e magia se entrelaçam neste épico de fantasia. Enquanto as grandes casas de Westeros lutam pelo Trono de Ferro, uma ameaça antiga desperta além da Muralha, trazendo trevas e terror para os Sete Reinos.",
+      "book_cover": "/images/book-cover/a-guerra-dos-tronos.jpg"
+    },
+    {
+      "name": "Alice no País das Maravilhas",
+      "author": "Lewis Carroll",
+      "pub_year": 1865,
+      "description": "Ao seguir um coelho branco, Alice cai em um buraco que a leva ao País das Maravilhas, um lugar povoado por criaturas estranhas e surreais. Lá, ela embarca em uma série de aventuras absurdas e encontra personagens inesquecíveis.",
+      "book_cover": "/images/book-cover/alice-no-pais-das-maravilhas.jpg"
+    },
+    {
+      "name": "A Bússola de Ouro",
+      "author": "Philip Pullman",
+      "pub_year": 1995,
+      "description": "Neste mundo alternativo onde as almas das pessoas se manifestam como criaturas chamadas daemons, a jovem Lyra Belacqua embarca em uma jornada para o norte em busca de seu amigo sequestrado e descobre segredos profundos sobre o universo.",
+      "book_cover": "/images/book-cover/a-bussola-de-ouro.jpg"
+    },
+    {
+      "name": "O Nome do Vento",
+      "author": "Patrick Rothfuss",
+      "pub_year": 2007,
+      "description": "Kvothe, um prodígio da música e da magia, narra sua própria história desde a infância até se tornar uma lenda. Em sua busca pelo conhecimento e vingança, ele enfrenta adversidades, criaturas sobrenaturais e mistérios antigos.",
+      "book_cover": "/images/book-cover/o-nome-do-vento.jpg"
+    },
+    {
+      "name": "Mistborn: O Império Final",
+      "author": "Brandon Sanderson",
+      "pub_year": 2006,
+      "description": "Em um mundo onde o mal reina supremo, Vin, uma jovem ladra com poderes mágicos, se junta a um grupo de rebeldes para derrubar o Imperador Imortal. Munida de habilidades alomânticas, ela desafia o destino e luta por liberdade.",
+      "book_cover": "/images/book-cover/mistborn-o-imperio-final.jpg"
+    },
+    {
+      "name": "O Último Desejo",
+      "author": "Andrzej Sapkowski",
+      "pub_year": 1993,
+      "description": "Geralt de Rívia, um caçador de monstros conhecido como Witcher, embarca em uma série de aventuras épicas em um mundo repleto de criaturas mágicas, intriga política e conflitos épicos. Suas escolhas moldarão o destino de reinos inteiros.",
+      "book_cover": "/images/book-cover/o-ultimo-desejo.jpg"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "books": [
+    {
+      "name": "Steve Jobs",
+      "book_cover": "/images/book-cover/steve-jobs.jpg",
+      "author": "Walter Isaacson",
+      "pub_year": 2011,
+      "description": "Esta biografia autorizada oferece um olhar profundo e íntimo sobre a vida e os feitos de Steve Jobs, o visionário co-fundador da Apple. Desde sua infância até sua ascensão como um dos líderes mais influentes da indústria de tecnologia, Isaacson revela os altos e baixos de Jobs com detalhes fascinantes."
+    },
+    {
+      "name": "Diário de Anne Frank",
+      "book_cover": "/images/book-cover/diario-de-anne-frank.jpg",
+      "author": "Anne Frank",
+      "pub_year": 1947,
+      "description": "Escrito durante os anos em que Anne Frank e sua família estavam escondidos dos nazistas durante a Segunda Guerra Mundial, este diário oferece um relato íntimo e comovente da vida de uma jovem judia. Suas reflexões sobre amor, esperança e humanidade continuam a inspirar leitores em todo o mundo."
+    },
+    {
+      "name": "A Autobiografia de Malcolm X",
+      "book_cover": "/images/book-cover/a-autobiografia-de-malcolm-x.jpg",
+      "author": "Malcolm X, Alex Haley",
+      "pub_year": 1965,
+      "description": "Nesta autobiografia poderosa e provocativa, Malcolm X narra sua jornada de criminalidade juvenil até se tornar um dos líderes mais proeminentes do movimento pelos direitos civis dos negros nos Estados Unidos. Sua voz franca e apaixonada oferece uma visão única sobre questões de raça, identidade e justiça social."
+    },
+    {
+      "name": "Eu, Malala",
+      "book_cover": "/images/book-cover/eu-malala.jpg",
+      "author": "Malala Yousafzai, Christina Lamb",
+      "pub_year": 2013,
+      "description": "Malala Yousafzai, a jovem paquistanesa que sobreviveu a um atentado do Talibã por defender a educação feminina, conta sua história inspiradora neste livro. Sua coragem e determinação em busca da igualdade educacional tornaram-na uma voz poderosa para os direitos das mulheres em todo o mundo."
+    },
+    {
+      "name": "Minha História",
+      "book_cover": "/images/book-cover/minha-historia.jpg",
+      "author": "Michelle Obama",
+      "pub_year": 2018,
+      "description": "Nesta franca e emocionante autobiografia, Michelle Obama compartilha sua jornada de vida, desde sua infância humilde em Chicago até seus anos como primeira-dama dos Estados Unidos. Com sinceridade e sabedoria, ela discute sua carreira, sua família e seu compromisso com o serviço público."
+    },
+    {
+      "name": "Leonardo da Vinci",
+      "book_cover": "/images/book-cover/leonardo-da-vinci.jpg",
+      "author": "Walter Isaacson",
+      "pub_year": 2017,
+      "description": "Nesta biografia magistral, Isaacson mergulha na vida extraordinária de Leonardo da Vinci, revelando sua genialidade artística, científica e inventiva. Com base em milhares de páginas dos cadernos de Leonardo e novas descobertas sobre sua vida, Isaacson oferece uma visão única sobre este gênio renascentista."
+    },
+    {
+      "name": "Elon Musk",
+      "book_cover": "/images/book-cover/elon-musk.jpg",
+      "author": "Walter Isaacson",
+      "pub_year": 2023,
+      "description": "Nesta biografia autorizada, Vance narra a vida e os empreendimentos de Elon Musk, o visionário empresário por trás de empresas como Tesla, SpaceX e SolarCity. Com acesso exclusivo a Musk e sua família, Vance oferece um retrato fascinante de um dos líderes mais inovadores e controversos da era moderna."
+    },
+    {
+      "name": "Agatha Christie: Uma Biografia",
+      "book_cover": "/images/book-cover/agatha-christie-uma-biografia.jpg",
+      "author": "Janet Morgan",
+      "pub_year": 1984,
+      "description": "Esta biografia autorizada oferece uma visão íntima da vida e da carreira de Agatha Christie, a rainha do romance policial. Com acesso exclusivo aos arquivos pessoais de Christie, Morgan traça a jornada da autora desde sua infância idílica até sua ascensão como uma das escritoras mais vendidas de todos os tempos."
+    }
+  ]
+}

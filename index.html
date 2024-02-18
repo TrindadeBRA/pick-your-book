@@ -1,0 +1,169 @@
+<div>
+    <!-- <div id="form1">
+        <h2>Formulário 1</h2>
+        <form id="form1">
+            <label for="name">Nome:</label><br>
+            <input type="text" id="name" name="name" autocomplete="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" autocomplete="email"><br><br>
+            <button type="button" onclick="submitForm1()">Enviar</button>
+        </form>
+    </div> -->
+
+    <div id="form2">
+        <h2>Formulário 2</h2>
+        <form id="form2">
+            <label for="category">Selecione uma categoria de livros:</label><br>
+            <select id="category" name="category">
+                <option value="biography">Biografia</option>
+                <option value="fantasy">Fantasia</option>
+                <option value="horror">Horror</option>
+                <option value="thriller">Suspense</option>
+            </select>
+
+            <br><br>
+            <button type="button" onclick="submitForm2()">Enviar</button>
+        </form>
+    </div>
+
+    <div id="bookData" style="display:none;">
+        <h2>Dados do Livro Sorteado</h2>
+        <div id="bookInfo">
+            <p>Nome: <span class="book-name"></span></p>
+            <p>Autor: <span class="book-author"></span></p>
+            <p>Anpo de Publicação: <span class="book-pub_year"></span></p>
+            <p>Descricao: <span class="book-description"></span></p>
+            <img src="" alt="" class="book-cover" style="height: 350px;">
+        </div>
+        <button onclick="sortAgain()">Sortear Novamente</button>
+    </div>
+
+    <script>
+        function sortAgain() {
+            window.location.reload();
+        }
+
+        function submitForm2() {
+            var category = document.getElementById("category").value;
+            console.log("Formulário 2 Enviado:");
+            console.log("Categoria de Livros: " + category);
+
+            // Aqui você pode chamar a função para buscar um livro aleatório com base na categoria
+            searchRandomBook(category);
+        }
+
+
+        function searchRandomBook(category) {
+            // Mapear o caminho do arquivo JSON com base na categoria fornecida
+            const filePath = `categories/${category}.json`;
+
+            // Realizar a requisição local
+            fetch(filePath)
+                .then(response => response.json())
+                .then(data => {
+                    // Verificar se existem livros no JSON
+                    if (data.books && data.books.length > 0) {
+
+                        // Selecionar um índice aleatório que não está presente nos parâmetros da categoria
+                        let randomIndex;
+                        do {
+                            randomIndex = Math.floor(Math.random() * data.books.length);
+                        } while (!validateRandomIndex(category, randomIndex));
+
+                        const book = data.books[randomIndex];
+
+                        // Chame a função addRandomIndexToCategoryParams após encontrar o livro aleatório
+                        addRandomIndexToCategoryParams(randomIndex, category);
+
+
+                        // Log dos campos do livro selecionado
+                        console.log("Livro Aleatório Encontrado:");
+                        console.log("Nome: " + book.name);
+                        console.log("Autor: " + book.author);
+                        console.log("Ano de Publicação: " + book.pub_year);
+                        console.log("Descrição: " + book.description);
+                        console.log("Capa: " + removeAccent(book.book_cover));
+
+
+                        // Atualizar os valores das spans
+                        document.querySelector('.book-name').textContent = book.name;
+                        document.querySelector('.book-author').textContent = book.author;
+                        document.querySelector('.book-pub_year').textContent = book.pub_year;
+                        document.querySelector('.book-description').textContent = book.description;
+                        document.querySelector('.book-cover').src = removeAccent(book.book_cover);
+
+                        // Exibir a div com os dados do livro
+                        document.getElementById("form2").style.display = "none";
+                        document.getElementById("bookData").style.display = "block";
+                    } else {
+                        console.log("Nenhum livro encontrado para esta categoria.");
+                    }
+                })
+                .catch(error => {
+                    console.error("Ocorreu um erro ao buscar o livro:", error);
+                });
+        }
+
+
+        function removeAccent(str) {
+            return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        }
+
+
+        function addRandomIndexToCategoryParams(randomIndex, category) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const params = {};
+
+            // Iterar sobre todos os parâmetros da URL
+            for (const [key, value] of urlParams) {
+                // Verificar se o parâmetro possui o formato cat_$categoria
+                const match = key.match(/^cat_(.+)$/);
+                if (match) {
+                    const paramCategory = match[1];
+                    // Se for da mesma categoria, adicionar o randomIndex aos valores
+                    if (paramCategory === category) {
+                        // Se já houver valores para esta categoria, adicionamos o novo randomIndex aos valores existentes
+                        if (params[key]) {
+                            params[key] += `,${randomIndex}`;
+                        } else {
+                            params[key] = value + `,${randomIndex}`;
+                        }
+                    } else {
+                        // Caso contrário, manter o parâmetro como está
+                        params[key] = value;
+                    }
+                } else {
+                    // Manter os parâmetros que não correspondem ao formato cat_$categoria
+                    params[key] = value;
+                }
+            }
+
+            // Se não houver parâmetros para a categoria atual, adicionar um novo parâmetro
+            if (!(`cat_${category}` in params)) {
+                params[`cat_${category}`] = randomIndex.toString();
+            }
+
+            // Reconstruir a string da query da URL com os parâmetros atualizados
+            let updatedParamsString = '';
+            for (const [key, value] of Object.entries(params)) {
+                updatedParamsString += `${key}=${value}&`;
+            }
+            // Remover o último '&' e atualizar a URL
+            window.history.replaceState({}, '', `${window.location.pathname}?${updatedParamsString.slice(0, -1)}`);
+        }
+
+
+        function validateRandomIndex(category, randomIndex) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get(`cat_${category}`);
+            if (categoryParam) {
+                const numbers = categoryParam.split(',').map(Number);
+                return !numbers.includes(randomIndex);
+            }
+            return true;
+        }
+
+
+    </script>
+
+</div>
