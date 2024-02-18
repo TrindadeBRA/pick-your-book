@@ -165,7 +165,6 @@
             window.location.reload();
         }
 
-
         function submitForm() {
             var category = document.getElementById("category").value;
             // console.log("Formulário 2 Enviado:");
@@ -175,6 +174,21 @@
             searchRandomBook(category);
         }
 
+        function checkQtyResultsLoop(category, qntyResults) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get(`cat_${category}`);
+            if (categoryParam) {
+                const numbers = categoryParam.split(',').map(Number);
+                console.log("numbers.length", numbers.length)
+                console.log("qntyResults", qntyResults)
+
+                if (numbers.length === qntyResults) {
+                    return false;
+                }
+
+            }
+            return true;
+        }
 
         function searchRandomBook(category) {
             // Mapear o caminho do arquivo JSON com base na categoria fornecida
@@ -187,45 +201,54 @@
                     // Verificar se existem livros no JSON
                     if (data.books && data.books.length > 0) {
 
-                        // Selecionar um índice aleatório que não está presente nos parâmetros da categoria
-                        let randomIndex;
-                        do {
-                            randomIndex = Math.floor(Math.random() * data.books.length);
-                        } while (!validateRandomIndex(category, randomIndex));
+                        var qntyResults = data.books.length;
+                        let canContinue = checkQtyResultsLoop(category, qntyResults)
 
-                        const book = data.books[randomIndex];
+                        if (canContinue) {
+                            // Selecionar um índice aleatório que não está presente nos parâmetros da categoria
+                            let randomIndex;
+                            do {
+                                randomIndex = Math.floor(Math.random() * data.books.length);
+                            } while (!validateRandomIndex(category, randomIndex));
 
-                        // Chame a função addRandomIndexToCategoryParams após encontrar o livro aleatório
-                        addRandomIndexToCategoryParams(randomIndex, category);
+                            const book = data.books[randomIndex];
 
-
-                        // Log dos campos do livro selecionado
-                        // console.log("Livro Aleatório Encontrado:");
-                        // console.log("Nome: " + book.name);
-                        // console.log("Autor: " + book.author);
-                        // console.log("Ano de Publicação: " + book.pub_year);
-                        // console.log("Descrição: " + book.description);
-                        // console.log("Capa: " + removeAccent(book.book_cover));
+                            // Chame a função addRandomIndexToCategoryParams após encontrar o livro aleatório
+                            addRandomIndexToCategoryParams(randomIndex, category);
 
 
-                        // Atualizar os valores das spans
-                        document.querySelector('.book-name').textContent = book.name + " (" + book.pub_year + ")";
-                        document.querySelector('.book-author').textContent = "Escrito por: " + book.author;
-                        document.querySelector('.book-description').textContent = book.description;
-                        document.querySelector('.book-cover').src = "https://raw.githubusercontent.com/TrindadeBRA/pick-your-book/master/" + removeAccent(book.book_cover);
-                        document.querySelector('.book-cover').alt = book.name;
-                        document.querySelector('.book-cover').title = book.name;
+                            // Log dos campos do livro selecionado
+                            // console.log("Livro Aleatório Encontrado:");
+                            // console.log("Nome: " + book.name);
+                            // console.log("Autor: " + book.author);
+                            // console.log("Ano de Publicação: " + book.pub_year);
+                            // console.log("Descrição: " + book.description);
+                            // console.log("Capa: " + removeAccent(book.book_cover));
 
-                        let bookNameFormatted = formatBookName(book.name);
-                        let buyAmznUrl = "https://www.amazon.com.br/s?k=" + bookNameFormatted + "&i=stripbooks&crid=14EMS0LVCVSJJ&sprefix=" + bookNameFormatted + "%2Cstripbooks%2C288&linkCode=ll2&tag=trindadebra06-20&linkId=292401f8c737965fe22e62087dc57222&language=pt_BR&ref_=as_li_ss_tl";
-                        
-                        // console.log(">>", buyAmznUrl)
-                        document.querySelector('.buy-button').href = buyAmznUrl
-                        document.querySelector('.buy-image').href = buyAmznUrl
 
-                        // Exibir a div com os dados do livro
-                        document.getElementById("div-category").style.display = "none";
-                        document.getElementById("bookData").style.display = "block";
+                            // Atualizar os valores das spans
+                            document.querySelector('.book-name').textContent = book.name + " (" + book.pub_year + ")";
+                            document.querySelector('.book-author').textContent = "Escrito por: " + book.author;
+                            document.querySelector('.book-description').textContent = book.description;
+                            document.querySelector('.book-cover').src = "https://raw.githubusercontent.com/TrindadeBRA/pick-your-book/master/" + removeAccent(book.book_cover);
+                            document.querySelector('.book-cover').alt = book.name;
+                            document.querySelector('.book-cover').title = book.name;
+
+                            let bookNameFormatted = formatBookName(book.name);
+                            let buyAmznUrl = "https://www.amazon.com.br/s?k=" + bookNameFormatted + "&i=stripbooks&crid=14EMS0LVCVSJJ&sprefix=" + bookNameFormatted + "%2Cstripbooks%2C288&linkCode=ll2&tag=trindadebra06-20&linkId=292401f8c737965fe22e62087dc57222&language=pt_BR&ref_=as_li_ss_tl";
+
+                            // console.log(">>", buyAmznUrl)
+                            document.querySelector('.buy-button').href = buyAmznUrl
+                            document.querySelector('.buy-image').href = buyAmznUrl
+
+                            // Exibir a div com os dados do livro
+                            document.getElementById("div-category").style.display = "none";
+                            document.getElementById("bookData").style.display = "block";
+
+                        } else {
+                            alert("Não temos mais recomendações para esta categoria. Tente outra categoria!")
+                        }
+
                     } else {
                         console.log("Nenhum livro encontrado para esta categoria.");
                     }
@@ -252,7 +275,6 @@
         function removeAccent(str) {
             return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         }
-
 
         function addRandomIndexToCategoryParams(randomIndex, category) {
             const urlParams = new URLSearchParams(window.location.search);
@@ -296,7 +318,6 @@
             window.history.replaceState({}, '', `${window.location.pathname}?${updatedParamsString.slice(0, -1)}`);
         }
 
-
         function validateRandomIndex(category, randomIndex) {
             const urlParams = new URLSearchParams(window.location.search);
             const categoryParam = urlParams.get(`cat_${category}`);
@@ -306,7 +327,6 @@
             }
             return true;
         }
-
 
     </script>
 
