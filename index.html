@@ -229,7 +229,7 @@
             let formattedName = bookCover.toLowerCase();
 
             // Remover espaços duplos
-            formattedName = formattedName.normalize("NFD");
+            formattedName = formattedName.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
             formattedName = formattedName.replace(/\s+/g, ' ');
 
             // Trocar caracteres de espaço por '+'
