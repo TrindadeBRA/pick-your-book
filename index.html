@@ -1,41 +1,111 @@
-<div>
-    <!-- <div id="form1">
-        <h2>Formulário 1</h2>
-        <form id="form1">
-            <label for="name">Nome:</label><br>
-            <input type="text" id="name" name="name" autocomplete="name"><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" autocomplete="email"><br><br>
-            <button type="button" onclick="submitForm1()">Enviar</button>
-        </form>
-    </div> -->
+<style>
+    #book-info img {
+        width: 270px;
+        height: fit-content;
+    }
 
-    <div id="form2">
-        <h2>Formulário 2</h2>
-        <form id="form2">
+    #book-info {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        margin: 40px 0;
+    }
+
+    .book-name {
+        font-size: 30px;
+        padding-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .nectar-button.large.regular.accent-color.regular-button.buy-button {
+        background-color: #E67A00;
+        color: #232f3e;
+        width: fit-content;
+    }
+
+    .col-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @media only screen and (min-width: 769px) {
+        .mobonly {
+            display: none !important;
+        }
+    }
+
+    @media only screen and (max-width: 769px) {
+        .deskonly {
+            display: none !important;
+        }
+
+        #book-info {
+            flex-direction: column;
+        }
+
+        #book-info img {
+            margin: 0 auto;
+        }
+
+        .book-name {
+            text-align: center;
+        }
+
+        .book-author {
+            text-align: center;
+        }
+
+        .book-description {
+            text-align: center;
+        }
+
+        .nectar-button.large.regular.accent-color.regular-button.buy-button {
+            text-align: center;
+        }
+
+        .nectar-button.large.regular.accent-color.regular-button {
+            margin: 0 auto;
+            display: block;
+        }
+    }
+</style>
+
+<div>
+    <div id="div-category">
+        <h2 style="margin-bottom: 15px;">Escolha uma categoria:</h2>
+        <form id="form-category">
             <label for="category">Selecione uma categoria de livros:</label><br>
             <select id="category" name="category">
                 <option value="biography">Biografia</option>
                 <option value="fantasy">Fantasia</option>
                 <option value="horror">Horror</option>
                 <option value="thriller">Suspense</option>
+
             </select>
 
             <br><br>
-            <button type="button" onclick="submitForm2()">Enviar</button>
+            <button type="button" onclick="submitForm()" class="nectar-button large regular accent-color regular-button"
+                style="font-weight: bold;">Enviar</button>
         </form>
     </div>
 
     <div id="bookData" style="display:none;">
-        <h2>Dados do Livro Sorteado</h2>
-        <div id="bookInfo">
-            <p>Nome: <span class="book-name"></span></p>
-            <p>Autor: <span class="book-author"></span></p>
-            <p>Anpo de Publicação: <span class="book-pub_year"></span></p>
-            <p>Descricao: <span class="book-description"></span></p>
-            <img src="" alt="" class="book-cover" style="height: 350px;">
+        <h2>Sua próxima leitura pode ser:</h2>
+        <div id="book-info">
+            <img src="" alt="" class="book-cover">
+            <div class="col-right">
+                <p class="book-name"></p>
+                <p class="book-author"></p>
+                <p class="book-description"></p>
+                <a target="_blank" class="nectar-button large regular accent-color regular-button buy-button"
+                    style="font-weight: bold;">
+                    Comprar na Amazon pelo melhor preço!
+                </a>
+            </div>
         </div>
-        <button onclick="sortAgain()">Sortear Novamente</button>
+        <button onclick="sortAgain()" class="nectar-button large regular accent-color regular-button"
+            style="font-weight: bold;">Sortear Novamente</button>
     </div>
 
     <script>
@@ -48,10 +118,10 @@
         }
 
 
-        function submitForm2() {
+        function submitForm() {
             var category = document.getElementById("category").value;
-            console.log("Formulário 2 Enviado:");
-            console.log("Categoria de Livros: " + category);
+            // console.log("Formulário 2 Enviado:");
+            // console.log("Categoria de Livros: " + category);
 
             // Aqui você pode chamar a função para buscar um livro aleatório com base na categoria
             searchRandomBook(category);
@@ -82,23 +152,31 @@
 
 
                         // Log dos campos do livro selecionado
-                        console.log("Livro Aleatório Encontrado:");
-                        console.log("Nome: " + book.name);
-                        console.log("Autor: " + book.author);
-                        console.log("Ano de Publicação: " + book.pub_year);
-                        console.log("Descrição: " + book.description);
-                        console.log("Capa: " + removeAccent(book.book_cover));
+                        // console.log("Livro Aleatório Encontrado:");
+                        // console.log("Nome: " + book.name);
+                        // console.log("Autor: " + book.author);
+                        // console.log("Ano de Publicação: " + book.pub_year);
+                        // console.log("Descrição: " + book.description);
+                        // console.log("Capa: " + removeAccent(book.book_cover));
 
 
                         // Atualizar os valores das spans
-                        document.querySelector('.book-name').textContent = book.name;
-                        document.querySelector('.book-author').textContent = book.author;
-                        document.querySelector('.book-pub_year').textContent = book.pub_year;
+                        document.querySelector('.book-name').textContent = book.name + " (" + book.pub_year + ")";
+                        document.querySelector('.book-author').textContent = "Escrito por: " + book.author;
                         document.querySelector('.book-description').textContent = book.description;
                         document.querySelector('.book-cover').src = "https://raw.githubusercontent.com/TrindadeBRA/pick-your-book/master/" + removeAccent(book.book_cover);
+                        document.querySelector('.book-cover').alt = book.name;
+                        document.querySelector('.book-cover').title = book.name;
+
+                        let bookNameFormatted = formatBookName(book.name);
+                        let buyAmznUrl = "https://www.amazon.com.br/s?k=" + bookNameFormatted + "&i=stripbooks&crid=14EMS0LVCVSJJ&sprefix=" + bookNameFormatted + "%2Cstripbooks%2C288&ref=nb_sb_ss_ts-doa-p_1_10";
+                        // console.log(">>", buyAmznUrl)
+                        document.querySelector('.buy-button').href = buyAmznUrl
+
+
 
                         // Exibir a div com os dados do livro
-                        document.getElementById("form2").style.display = "none";
+                        document.getElementById("div-category").style.display = "none";
                         document.getElementById("bookData").style.display = "block";
                     } else {
                         console.log("Nenhum livro encontrado para esta categoria.");
@@ -109,6 +187,19 @@
                 });
         }
 
+        function formatBookName(bookCover) {
+            // Converter tudo para minúsculas
+            let formattedName = bookCover.toLowerCase();
+
+            // Remover espaços duplos
+            formattedName = formattedName.normalize("NFD");
+            formattedName = formattedName.replace(/\s+/g, ' ');
+
+            // Trocar caracteres de espaço por '+'
+            formattedName = formattedName.replace(/\s/g, '+');
+
+            return formattedName;
+        }
 
         function removeAccent(str) {
             return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
