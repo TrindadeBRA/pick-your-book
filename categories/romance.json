@@ -57,13 +57,6 @@
       "book_cover": "/images/book-cover/persuasao.jpg"
     },
     {
-      "name": "O Amor nos Tempos do Cólera",
-      "author": "Gabriel García Márquez",
-      "pub_year": 1985,
-      "description": "O Amor nos Tempos do Cólera é uma obra magistral que explora as complexidades do amor e do desejo através da história de amor entre Florentino Ariza e Fermina Daza, que se mantém inalterada ao longo de décadas e é testada por circunstâncias extraordinárias.",
-      "book_cover": "/images/book-cover/o-amor-nos-tempos-do-colera.jpg"
-    },
-    {
       "name": "Dom Casmurro",
       "author": "Machado de Assis",
       "pub_year": 1899,
