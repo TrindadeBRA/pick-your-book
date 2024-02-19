@@ -234,7 +234,8 @@
                             document.querySelector('.book-cover').alt = book.name;
                             document.querySelector('.book-cover').title = book.name;
 
-                            let bookNameFormatted = formatBookName(book.name);
+                            let searchParamBookName = book.name + " " + book.author;
+                            let bookNameFormatted = formatBookName(searchParamBookName);
                             let buyAmznUrl = "https://www.amazon.com.br/s?k=" + bookNameFormatted + "&i=stripbooks&crid=14EMS0LVCVSJJ&sprefix=" + bookNameFormatted + "%2Cstripbooks%2C288&linkCode=ll2&tag=trindadebra06-20&linkId=292401f8c737965fe22e62087dc57222&language=pt_BR&ref_=as_li_ss_tl";
 
                             // console.log(">>", buyAmznUrl)
