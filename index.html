@@ -56,8 +56,8 @@
             const categoryParam = urlParams.get(`cat_${category}`);
             if (categoryParam) {
                 const numbers = categoryParam.split(',').map(Number);
-                console.log("numbers.length", numbers.length)
-                console.log("qntyResults", qntyResults)
+                // console.log("numbers.length", numbers.length)
+                // console.log("qntyResults", qntyResults)
 
                 if (numbers.length === qntyResults) {
                     return false;
@@ -103,12 +103,12 @@
 
 
                             // Atualizar os valores das spans
-                            // document.querySelector('.book-name').textContent = book.name + " (" + book.pub_year + ")";
-                            // document.querySelector('.book-author').textContent = "Escrito por: " + book.author;
-                            // document.querySelector('.book-description').textContent = book.description;
-                            // document.querySelector('.book-cover').src = "https://raw.githubusercontent.com/TrindadeBRA/pick-your-book/master/" + removeAccent(book.book_cover);
-                            // document.querySelector('.book-cover').alt = book.name;
-                            // document.querySelector('.book-cover').title = book.name;
+                            document.querySelector('.book-name').textContent = book.name + " (" + book.pub_year + ")";
+                            document.querySelector('.book-author').textContent = "Escrito por: " + book.author;
+                            document.querySelector('.book-description').textContent = book.description;
+                            document.querySelector('.book-cover').src = "https://raw.githubusercontent.com/TrindadeBRA/pick-your-book/master/" + removeAccent(book.book_cover);
+                            document.querySelector('.book-cover').alt = book.name;
+                            document.querySelector('.book-cover').title = book.name;
 
                             let searchParamBookName = book.name + " " + book.author;
                             let bookNameFormatted = formatBookName(searchParamBookName);
