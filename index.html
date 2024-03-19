@@ -1,9 +1,9 @@
 <div>
     <div id="div-category" class="rounded-2.5xl border border-jacarta-100 bg-white p-8 dark:border-jacarta-600 dark:bg-jacarta-700 shadow-2xl">
         <h2 class="" style="margin: 0!important;">Escolha uma categoria:</h2>
-        <form id="form-category">
+        <form id="form-category" class="flex flex-col">
             <label for="category">Selecione uma categoria de livros:</label>
-            <select id="category" name="category">
+            <select id="category" name="category" class="max-w-[220px]">
                 <option value="our-recommendation">Nossa lista de recomendações!</option>
                 <option value="biography">Biografia</option>
                 <option value="fantasy">Fantasia</option>
@@ -12,11 +12,8 @@
                 <option value="romance">Romance</option>
                 <option value="thriller">Suspense</option>
             </select>
-
-            <br><br>
-            <button type="button" onclick="submitForm()" class=""
-                style="font-weight: bold;">Enviar</button>
         </form>
+        <button type="button" onclick="submitForm()" class="" style="font-weight: bold;">Enviar</button>
     </div>
 
     <div id="bookData" style="display:none;">
