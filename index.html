@@ -12,7 +12,10 @@
                 <option value="romance">Romance</option>
                 <option value="thriller">Suspense</option>
             </select>
-            <button type="button" onclick="submitForm()" class="mt-6 font-bold">Enviar</button>
+
+            <br><br>
+            <button type="button" onclick="submitForm()" class="nectar-button large regular accent-color regular-button"
+                style="font-weight: bold;">Enviar</button>
         </form>
     </div>
 
@@ -26,15 +29,17 @@
                 <p class="book-name"></p>
                 <p class="book-author"></p>
                 <p class="book-description"></p>
-                <a target="_blank" class=""
+                <a target="_blank" class="nectar-button large regular accent-color regular-button buy-button"
                     style="font-weight: bold;">
                     Comprar na Amazon pelo melhor preço!
                 </a>
             </div>
         </div>
-        <button onclick="sortAgain()" class=""
+        <button onclick="sortAgain()" class="nectar-button large regular accent-color regular-button"
             style="font-weight: bold;">Sortear Novamente</button>
     </div>
+
+    <script>console.log("XXX From github.")</script>
 
     <script>
         function sortAgain() {
@@ -47,7 +52,10 @@
 
         function submitForm() {
             var category = document.getElementById("category").value;
-            console.log("Categoria de Livros: " + category);
+            // console.log("Formulário 2 Enviado:");
+            // console.log("Categoria de Livros: " + category);
+
+            // Aqui você pode chamar a função para buscar um livro aleatório com base na categoria
             searchRandomBook(category);
         }
 
@@ -70,6 +78,7 @@
         function searchRandomBook(category) {
             // Mapear o caminho do arquivo JSON com base na categoria fornecida
             const filePath = `https://raw.githubusercontent.com/TrindadeBRA/pick-your-book/master/categories/${category}.json`;
+
             // Realizar a requisição local
             fetch(filePath)
                 .then(response => response.json())
