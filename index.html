@@ -12,7 +12,23 @@
         padding: 5px 30px;
     }
 
+    #github-content label{
+        color: #5A5D79;
+    }
+
+    .dark #github-content label{
+        color: #fff;
+    }
+
     .dark #github-content .sort-again{
+        font-weight: bold;
+        color: #131740;
+        background-color: #fff;
+        border: 2px solid #fff;
+        padding: 5px 30px;
+    }
+
+    .dark #github-content .submit-btn{
         font-weight: bold;
         color: #131740;
         background-color: #fff;
@@ -152,8 +168,7 @@
             </select>
 
             <br><br>
-            <button type="button" onclick="submitForm()" class=""
-                style="font-weight: bold;">Enviar</button>
+            <button type="button" onclick="submitForm()" class="submit-btn">Enviar</button>
         </form>
     </div>
 
