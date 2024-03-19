@@ -1,9 +1,126 @@
-<div class="prose" style="all: initial; color: inherit; font-family: inherit;">
-    <div id="div-category" class="rounded-2.5xl border border-jacarta-100 bg-white p-8 dark:border-jacarta-600 dark:bg-jacarta-700 shadow-2xl my-12">
-        <h2 class="font-bold text-2xl text-jacarta-700 dark:text-white" style="margin: 0!important;">Escolha uma categoria:</h2>
-        <form id="form-category" class="flex flex-col pt-6">
-            <label for="category" class="text-jacarta-500 dark:text-jacarta-300">Selecione uma categoria de livros:</label>
-            <select id="category" name="category" class="max-w-xs text-[#000]">
+<style>
+    #book-info img {
+        width: 100%;
+    }
+
+    #bookData .buy-image {
+        min-width: 270px;
+    }
+
+    #book-info {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        margin: 40px 0;
+    }
+
+    .book-name {
+        font-size: 30px;
+        padding-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .nectar-button.large.regular.accent-color.regular-button.buy-button {
+        background-color: #E67A00;
+        color: #232f3e;
+        width: fit-content;
+    }
+
+    .col-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    #div-category {
+        background-color: #f2f2f2;
+        padding: 18px;
+        border-radius: 16px;
+        border: 4px solid #000;
+    }
+
+    #bookData {
+        background-color: #f2f2f2;
+        padding: 42px;
+        border-radius: 16px;
+        border: 4px solid #000;
+    }
+
+    #form-category label {
+        margin-bottom: 0;
+        display: block;
+    }
+
+    .nectar-button.large.regular.accent-color.regular-button {
+        border: none;
+        cursor: pointer;
+    }
+
+    #form-category label {
+        margin-bottom: 0;
+        display: block;
+    }
+
+    #category {
+        border-color: #000;
+        font-size: 16px;
+        font-weight: bold;
+        color: #000;
+    }
+
+    @media only screen and (min-width: 769px) {
+        .mobonly {
+            display: none !important;
+        }
+    }
+
+    @media only screen and (max-width: 769px) {
+        .deskonly {
+            display: none !important;
+        }
+
+        #book-info {
+            flex-direction: column;
+        }
+
+        #book-info img {
+            margin: 0 auto;
+        }
+
+        .book-name {
+            text-align: center;
+        }
+
+        .book-author {
+            text-align: center;
+        }
+
+        .book-description {
+            text-align: center;
+        }
+
+        .nectar-button.large.regular.accent-color.regular-button.buy-button {
+            text-align: center;
+        }
+
+        .nectar-button.large.regular.accent-color.regular-button {
+            margin: 0 auto;
+            display: block;
+        }
+
+        #bookData .buy-image {
+            min-width: 100%;
+        }
+    }
+</style>
+
+<div>
+    <div id="div-category">
+        <h2 style="margin-bottom: 15px;">Escolha uma categoria:</h2>
+        <form id="form-category">
+            <label for="category">Selecione uma categoria de livros:</label>
+            <select id="category" name="category">
                 <option value="our-recommendation">Nossa lista de recomendações!</option>
                 <option value="biography">Biografia</option>
                 <option value="fantasy">Fantasia</option>
@@ -12,20 +129,23 @@
                 <option value="romance">Romance</option>
                 <option value="thriller">Suspense</option>
             </select>
-            <button type="button" onclick="submitForm()" class="mt-8 w-fit rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">Enviar</button>
+
+            <br><br>
+            <button type="button" onclick="submitForm()" class="nectar-button large regular accent-color regular-button"
+                style="font-weight: bold;">Enviar</button>
         </form>
     </div>
 
-    <div id="bookData" style="display:none;" class="rounded-2.5xl border border-jacarta-100 bg-white p-8 dark:border-jacarta-600 dark:bg-jacarta-700 shadow-2xl my-12">
-        <h2 class="font-bold text-2xl pb-6" style="margin: 0!important;">Sua próxima leitura pode ser:</h2>
-        <div id="book-info" class="flex flex-col lg:flex-row gap-6 items-center">
-            <a target="_blank" class="buy-image max-w-60">
+    <div id="bookData" style="display:none;">
+        <h2>Sua próxima leitura pode ser:</h2>
+        <div id="book-info">
+            <a target="_blank" class="buy-image">
                 <img src="" alt="" class="book-cover">
             </a>
             <div class="col-right">
-                <p class="book-name text-jacarta-500 dark:text-jacarta-300"></p>
-                <p class="book-author text-jacarta-500 dark:text-jacarta-300"></p>
-                <p class="book-description text-jacarta-500 dark:text-jacarta-300"></p>
+                <p class="book-name"></p>
+                <p class="book-author"></p>
+                <p class="book-description"></p>
                 <a target="_blank" class="nectar-button large regular accent-color regular-button buy-button"
                     style="font-weight: bold;">
                     Comprar na Amazon pelo melhor preço!
@@ -35,8 +155,6 @@
         <button onclick="sortAgain()" class="nectar-button large regular accent-color regular-button"
             style="font-weight: bold;">Sortear Novamente</button>
     </div>
-
-    <script>console.log(">> - 1.23")</script>
 
     <script>
         function sortAgain() {
