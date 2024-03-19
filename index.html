@@ -70,6 +70,8 @@
         function searchRandomBook(category) {
             // Mapear o caminho do arquivo JSON com base na categoria fornecida
             const filePath = `https://raw.githubusercontent.com/TrindadeBRA/pick-your-book/master/categories/${category}.json`;
+            console.log("filePath:", filePath);
+
 
             // Realizar a requisição local
             fetch(filePath)
