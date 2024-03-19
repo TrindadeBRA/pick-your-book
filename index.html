@@ -70,9 +70,6 @@
         function searchRandomBook(category) {
             // Mapear o caminho do arquivo JSON com base na categoria fornecida
             const filePath = `https://raw.githubusercontent.com/TrindadeBRA/pick-your-book/master/categories/${category}.json`;
-            console.log("filePath:", filePath);
-
-
             // Realizar a requisição local
             fetch(filePath)
                 .then(response => response.json())
@@ -106,12 +103,12 @@
 
 
                             // Atualizar os valores das spans
-                            document.querySelector('.book-name').textContent = book.name + " (" + book.pub_year + ")";
-                            document.querySelector('.book-author').textContent = "Escrito por: " + book.author;
-                            document.querySelector('.book-description').textContent = book.description;
-                            document.querySelector('.book-cover').src = "https://raw.githubusercontent.com/TrindadeBRA/pick-your-book/master/" + removeAccent(book.book_cover);
-                            document.querySelector('.book-cover').alt = book.name;
-                            document.querySelector('.book-cover').title = book.name;
+                            // document.querySelector('.book-name').textContent = book.name + " (" + book.pub_year + ")";
+                            // document.querySelector('.book-author').textContent = "Escrito por: " + book.author;
+                            // document.querySelector('.book-description').textContent = book.description;
+                            // document.querySelector('.book-cover').src = "https://raw.githubusercontent.com/TrindadeBRA/pick-your-book/master/" + removeAccent(book.book_cover);
+                            // document.querySelector('.book-cover').alt = book.name;
+                            // document.querySelector('.book-cover').title = book.name;
 
                             let searchParamBookName = book.name + " " + book.author;
                             let bookNameFormatted = formatBookName(searchParamBookName);
