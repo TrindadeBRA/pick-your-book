@@ -1,4 +1,25 @@
 <style>
+    #github-content h2{
+        margin-top: 0!important;
+        margin-bottom: 0!important;
+    }
+
+    #github-content .sort-again{
+        font-weight: bold;
+        color: #fff;
+        background-color: #131740;
+        border: 2px solid #131740;
+        padding: 5px 30px;
+    }
+
+    .dark #github-content .sort-again{
+        font-weight: bold;
+        color: #131740;
+        background-color: #fff;
+        border: 2px solid #fff;
+        padding: 5px 30px;
+    }
+
     #book-info img {
         width: 100%;
     }
@@ -34,14 +55,14 @@
 
 
     #div-category {
-        background-color: #f2f2f2;
+        background-color: #f5f8fa;
         padding: 18px;
-        border-radius: 16px;
+        border-radius: 16px;github-content
         border: 4px solid #000;
     }
 
     #bookData {
-        background-color: #f2f2f2;
+        background-color: #f5f8fa;
         padding: 42px;
         border-radius: 16px;
         border: 4px solid #000;
@@ -115,9 +136,9 @@
     }
 </style>
 
-<div>
+<div id="github-content">
     <div id="div-category">
-        <h2 style="margin-bottom: 15px;">Escolha uma categoria:</h2>
+        <h2>Escolha uma categoria:</h2>
         <form id="form-category">
             <label for="category">Selecione uma categoria de livros:</label>
             <select id="category" name="category">
@@ -131,7 +152,7 @@
             </select>
 
             <br><br>
-            <button type="button" onclick="submitForm()" class="nectar-button large regular accent-color regular-button"
+            <button type="button" onclick="submitForm()" class=""
                 style="font-weight: bold;">Enviar</button>
         </form>
     </div>
@@ -146,14 +167,13 @@
                 <p class="book-name"></p>
                 <p class="book-author"></p>
                 <p class="book-description"></p>
-                <a target="_blank" class="nectar-button large regular accent-color regular-button buy-button"
+                <a target="_blank" class="buy-button"
                     style="font-weight: bold;">
                     Comprar na Amazon pelo melhor preço!
                 </a>
             </div>
         </div>
-        <button onclick="sortAgain()" class="nectar-button large regular accent-color regular-button"
-            style="font-weight: bold;">Sortear Novamente</button>
+        <button onclick="sortAgain()" class="sort-again">Sortear Novamente</button>
     </div>
 
     <script>
